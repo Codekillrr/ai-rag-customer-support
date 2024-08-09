@@ -26,7 +26,7 @@ export function Chat() {
     console.log(messages);
 
     return (
-        <AuroraBackground className="bg-slate-900">
+        <AuroraBackground className="bg-slate-950">
             <motion.div
                 initial={{ opacity: 0.0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -47,13 +47,13 @@ export function Chat() {
                             <>
                                 {m.role === 'user' ? (
                                     <li key={index} className="flex  flex-row-reverse">
-                                        <div className="rounded-xl p-4 shadow-md flex bg-slate-800 bg-opacity-50">
+                                        <div className="rounded-xl p-4 shadow-md flex bg-slate-800 bg-opacity-40">
                                             <p className="text-white text-primary">{m.content}</p>
                                         </div>
                                     </li>
                                 ) : (
                                     <li key={index} className="flex flex-row">
-                                        <div className="rounded-xl p-4 bg-background shadow-md flex bg-slate-900 bg-opacity-50">
+                                        <div className="rounded-xl p-4 bg-background shadow-md flex bg-slate-950 bg-opacity-40">
                                             <p className=" text-white text-primary"><span className="font-bold">Answer: </span>{m.content}</p>
                                         </div>
                                     </li>
