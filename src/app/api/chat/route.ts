@@ -1,11 +1,12 @@
 import OpenAI from 'openai';
 import { OpenAIStream, StreamingTextResponse } from 'ai';
+require('dotenv').config() 
 
 // export const runtime = 'edge';
 
 const openai = new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
-    apiKey: "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", //$OPENROUTER_API_KEY
+    apiKey: process.env.OPENROUTER_API_KEY1,
 //     defaultHeaders: {
 //     // "HTTP-Referer": $YOUR_SITE_URL, // Optional, for including your app on openrouter.ai rankings.
 //     // "X-Title": $YOUR_SITE_NAME, // Optional. Shows in rankings on openrouter.ai.

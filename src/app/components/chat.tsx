@@ -54,7 +54,7 @@ export function Chat() {
                                 ) : (
                                     <li key={index} className="flex flex-row">
                                         <div className="rounded-xl p-4 bg-background shadow-md flex bg-slate-950 bg-opacity-40">
-                                            <p className=" text-white text-primary"><span className="font-bold">Answer: </span>{m.content}</p>
+                                            <p className=" text-slate-300 text-primary"><span className="font-bold">Answer: </span>{m.content}</p>
                                         </div>
                                     </li>
                                 )}
@@ -66,7 +66,7 @@ export function Chat() {
 
                 <section className="p-4 pb-20">
                     <form onSubmit={handleSubmit} className="flex w-full max-w-3xl  mx-auto items-center">
-                        <input className="flex-1 min-h-[50px] rounded-md p-2 focus:border-slate-300 focus:border-4 focus:ring-0 focus:outline-none border-black text-white bg-opacity-40 bg-slate-600" placeholder="Type your question here..." type="text" value={input} onChange={handleInputChange} />
+                        <input className="flex-1 min-h-[50px] rounded-md p-2 pl-4 focus:border-slate-300 focus:border-4 focus:ring-0 focus:outline-none border-black text-white bg-opacity-40 bg-slate-600" placeholder="Type your question here..." type="text" value={input} onChange={handleInputChange} />
                         <Button className=" text-slate-200 hover:bg-slate-500 font-extrabold border-2 border-black bg-slate-600 opacity-70 ml-2 min-h-[50px]" type="submit">
                             Send
                         </Button>
