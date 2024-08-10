@@ -39,15 +39,15 @@ export function Chat() {
             >
 
             <main className="flex flex-col pt-10 w-screen h-screen max-h-dvh">
-                <section className="container bg-slate-800 bg-opacity-20 px-0 rounded-lg pt-5 flex flex-col flex-grow gap-4 mx-auto max-w-3xl  border-white">
+                <section className="container bg-slate-800 bg-opacity-20 px-0 rounded-lg pt-5 flex flex-col flex-grow gap-4 mx-auto max-w-3xl border-2 border-black">
                     <ul ref={chatParent} className="h-1 p-4 flex-grow bg-muted/50 rounded-lg overflow-y-auto flex flex-col gap-4">
-                        <h1 className="text-3xl md:text-5xl font-bold text-white p-4 border-b-2 border-white">AI Customer Support</h1>
+                        <h1 className="text-3xl md:text-5xl font-bold text-slate-300 p-4 border-b-2 border-black">AI Customer Support</h1>
                         <div className="p-1"></div>
                         {messages.map((m, index) => (
                             <>
                                 {m.role === 'user' ? (
                                     <li key={index} className="flex  flex-row-reverse">
-                                        <div className="rounded-xl p-4 shadow-md flex bg-slate-800 bg-opacity-40">
+                                        <div className="rounded-xl p-4 shadow-md flex bg-slate-800 bg-opacity-50">
                                             <p className="text-white text-primary">{m.content}</p>
                                         </div>
                                     </li>
@@ -66,8 +66,8 @@ export function Chat() {
 
                 <section className="p-4 pb-20">
                     <form onSubmit={handleSubmit} className="flex w-full max-w-3xl  mx-auto items-center">
-                        <Input className="flex-1 min-h-[50px] text-white bg-opacity-40 bg-slate-600" placeholder="Type your question here..." type="text" value={input} onChange={handleInputChange} />
-                        <Button className=" text-white font-extrabold bg-slate-600 opacity-70 ml-2 min-h-[50px]" type="submit">
+                        <input className="flex-1 min-h-[50px] rounded-md p-2 focus:border-slate-300 focus:border-4 focus:ring-0 focus:outline-none border-black text-white bg-opacity-40 bg-slate-600" placeholder="Type your question here..." type="text" value={input} onChange={handleInputChange} />
+                        <Button className=" text-slate-200 hover:bg-slate-500 font-extrabold border-2 border-black bg-slate-600 opacity-70 ml-2 min-h-[50px]" type="submit">
                             Send
                         </Button>
                     </form>
