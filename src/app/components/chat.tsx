@@ -6,6 +6,7 @@ import { useChat } from "ai/react"
 import { useRef, useEffect } from 'react'
 import { AuroraBackground } from "../../components/ui/aurora-background"
 import { motion } from "framer-motion";
+import ReactMarkdown from 'react-markdown';
 
 export function Chat() {
     const { messages, input, 
@@ -41,7 +42,7 @@ export function Chat() {
             <main className="flex flex-col pt-10 w-screen h-screen max-h-dvh">
                 <section className="container bg-slate-800 bg-opacity-20 px-0 rounded-lg pt-5 flex flex-col flex-grow gap-4 mx-auto max-w-3xl border-2 border-black">
                     <ul ref={chatParent} className="h-1 p-4 flex-grow bg-muted/50 rounded-lg overflow-y-auto flex flex-col gap-4">
-                        <h1 className="text-3xl md:text-5xl font-bold text-slate-300 p-4 border-b-2 border-black">AI Customer Support</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold text-slate-300 p-4 border-b-2 border-black">Volvo S90 Customer Support</h1>
                         <div className="p-1"></div>
                         {messages.map((m, index) => (
                             <>
@@ -54,7 +55,12 @@ export function Chat() {
                                 ) : (
                                     <li key={index} className="flex flex-row">
                                         <div className="rounded-xl p-4 bg-background shadow-md flex bg-slate-950 bg-opacity-40">
-                                            <p className=" text-slate-300 text-primary"><span className="font-bold">Answer: </span>{m.content}</p>
+                                            <p className=" text-slate-300 text-primary">
+                                            <span className="font-bold">Answer: </span>
+                                            <ReactMarkdown>
+                                            {m.content}
+                                            </ReactMarkdown>
+                                            </p>
                                         </div>
                                     </li>
                                 )}
