@@ -15,8 +15,7 @@ const openai = new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
     apiKey: process.env.OPENROUTER_API_KEY1!,
 });
-console.log("hello");
-console.log(process.env.PINECONE_API_KEY!);
+
 const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY! });
 
 async function getContext(query: string): Promise<string> {

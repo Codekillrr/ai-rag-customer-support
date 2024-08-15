@@ -23,8 +23,6 @@ export function Chat() {
         }
     })
 
-    console.log(messages);
-
     return (
         <AuroraBackground className="bg-slate-950">
             <motion.div
