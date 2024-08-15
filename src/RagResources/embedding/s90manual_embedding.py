@@ -4,7 +4,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
 
 # Set your API key
-os.environ["PINECONE_API_KEY"] = "9786676c-f535-4428-a97b-6164addccfe9"
+os.environ["PINECONE_API_KEY"] = "pinecone-api-key"
 
 def main():
     pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
