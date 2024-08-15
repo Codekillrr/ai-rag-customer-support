@@ -69,7 +69,6 @@ export async function POST(req: Request) {
         stream: true,
         messages: [...prompt, ...messages],
     });
-    console.log([...prompt, ...messages]);
     // Convert the response into a friendly text-stream
     const stream = OpenAIStream(response);
 
